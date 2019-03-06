@@ -1,9 +1,12 @@
+// ESP32 with lm35 temperature sensor from DFROBOT.
+// The temp seems to fluctuate with +-2 degrees.
+// Changing the read resolution and the attenuation is recommended, but i don't think it will have a significant change on the fluctuations. They seem too large to be ADC issues.
+
 const int analogIn = 26;
  
 int raw = 0;
 double voltage = 0;
 double tempC = 0;
-
 
 void setup(){
   Serial.begin(115200);
